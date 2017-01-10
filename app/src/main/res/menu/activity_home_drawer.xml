@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_models"
+            android:title="Models" />
+        <item
+            android:id="@+id/nav_races"
+            android:title="Races" />
+        <item
+            android:id="@+id/nav_spare_parts"
+            android:title="Spare parts" />
+        <item
+            android:id="@+id/nav_cook_car"
+            android:title="Cook your car" />
+        <item
+            android:id="@+id/nav_about"
+            android:title="About us" />
+    </group>
+
+</menu>
