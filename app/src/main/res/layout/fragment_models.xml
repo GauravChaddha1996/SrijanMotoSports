@@ -4,11 +4,30 @@
     android:layout_height="match_parent"
     tools:context="com.srijan.motosports.features.models.ModelsFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="This is models fragment"
-        android:textSize="25sp" />
+        android:id="@+id/button_model_TSI_17_SE"
+        android:layout_margin="@dimen/about_description"
+        android:text="TSI-17-SE"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_model_TSI_17_SE"
+        android:id="@+id/button_model_TSI_17_KE"
+        android:layout_marginLeft="@dimen/about_description"
+        android:layout_marginRight="@dimen/about_description"
+        android:text="TSI-17-KE"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_model_TSI_17_KE"
+        android:text="Cook Up Your Own Car"
+        android:id="@+id/button_cook_car"
+        android:layout_margin="@dimen/about_description"
+
+        />
 
 </RelativeLayout>
