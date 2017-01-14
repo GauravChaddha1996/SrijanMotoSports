@@ -5,5 +5,6 @@
     <color name="colorAccent">#FF4081</color>
 
     <!--Base colors-->
-    <color name="light_grey">#FF929292</color>
+    <color name="grey">#FF929292</color>
+    <color name="light_grey">#cbcbcb</color>
 </resources>
