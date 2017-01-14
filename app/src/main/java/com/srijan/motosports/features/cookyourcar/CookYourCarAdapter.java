@@ -20,12 +20,12 @@ import java.util.List;
 public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYourCarParentViewHolder, CookYourCarChildViewHolder> {
 
     LayoutInflater inflater;
-    CalculateTotalAmount amountInterface;
+    ItemCheckChangedListener checkChangeListener;
 
-    public CookYourCarAdapter(Context context, List<? extends CheckedExpandableGroup> groups,CalculateTotalAmount amountInterface) {
+    public CookYourCarAdapter(Context context, List<? extends CheckedExpandableGroup> groups, ItemCheckChangedListener checkChangeListener) {
         super(groups);
         inflater = LayoutInflater.from(context);
-        this.amountInterface = amountInterface;
+        this.checkChangeListener = checkChangeListener;
     }
 
     @Override
@@ -40,6 +40,11 @@ public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYo
         holder.childCost.setText("$" + itemChild.getCost());
         holder.childDescription.setText(itemChild.getDescription());
         calculateAmount();
+        for(int i=0;i<group.selectedChildren.length;i++) {
+            if(group.isChildChecked(i) && childIndex == i) {
+                checkChangeListener.animateStuff(((CookYourCarItem)group).getGroupName());
+            }
+        }
     }
 
     @Override
@@ -59,12 +64,11 @@ public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYo
         List<CookYourCarItem> grps = (List<CookYourCarItem>) getGroups();
         for (CookYourCarItem item : grps) {
             for (int i = 0; i < item.selectedChildren.length; i++) {
-                System.out.println(i+":"+item.isChildChecked(i));
                 if (item.isChildChecked(i)) {
                     amount += ((CookYouCarItemChild) item.getItems().get(i)).getCost();
                 }
             }
         }
-        amountInterface.itemPickedChanged(String.valueOf(amount));
+        checkChangeListener.itemPickedChanged(String.valueOf(amount));
     }
 }

@@ -11,12 +11,18 @@ import java.util.List;
  */
 
 public class CookYourCarItem extends SingleCheckExpandableGroup{
+    String groupName;
     public CookYourCarItem(String title, List items) {
         super(title, items);
+        groupName = title;
     }
 
     public CookYourCarItem(Parcel in) {
         super(in);
+    }
+
+    public String getGroupName() {
+        return groupName;
     }
 
     @Override
