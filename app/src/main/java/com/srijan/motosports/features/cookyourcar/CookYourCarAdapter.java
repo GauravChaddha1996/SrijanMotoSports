@@ -51,7 +51,6 @@ public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYo
     public void onBindGroupViewHolder(CookYourCarParentViewHolder holder, int flatPosition, ExpandableGroup group) {
         CookYourCarItem item = (CookYourCarItem) group;
         holder.parentTitle.setText(item.getTitle());
-        ((CookYourCarItem) group).checkChild(0);
         calculateAmount();
     }
 
