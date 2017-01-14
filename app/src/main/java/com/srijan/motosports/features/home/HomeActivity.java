@@ -36,9 +36,9 @@ public class HomeActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         homePresenter = new HomePresenter(this);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Srijan Motosports");
         setUpNavigationDrawer();
         setFragment(new HomeFragment());
+        getSupportActionBar().setTitle("Srijan Motosports");
     }
 
     @Override
@@ -47,7 +47,8 @@ public class HomeActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            moveTaskToBack(true);
+            //super.onBackPressed();
         }
     }
 
