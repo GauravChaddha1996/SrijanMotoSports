@@ -4,11 +4,30 @@
     android:layout_height="match_parent"
     tools:context="com.srijan.motosports.features.home.fragment.HomeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="This is home fragment"
-        android:textSize="25sp" />
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/imageSliderLayoutHomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
 
+    <TextView
+        android:id="@+id/textView_HomeFragment_NextRaceTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageSliderLayoutHomeFragment"
+        android:background="@drawable/home_fragment_background"
+        android:padding="4dp"
+        android:textSize="25sp"
+        android:text="@string/home_fragment_next_race" />
+
+    <TextView
+        android:id="@+id/textView_HomeFragment_CallYourRaceEngineer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_HomeFragment_NextRaceTimer"
+        android:background="@android:color/holo_blue_light"
+        android:textSize="25sp"
+        android:drawableLeft="@drawable/call"
+        android:drawablePadding="8dp"
+        android:padding="16dp"
+        android:text="@string/home_fragment_call_race_engineer" />
 </RelativeLayout>
