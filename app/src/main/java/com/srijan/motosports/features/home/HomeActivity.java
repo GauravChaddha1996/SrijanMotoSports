@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         homePresenter = new HomePresenter(this);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Srijan Motosports");
         setUpNavigationDrawer();
         setFragment(new HomeFragment());
     }
@@ -72,6 +73,47 @@ public class HomeActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            if (!(currentFragment instanceof HomeFragment)) {
+                setFragment(new HomeFragment());
+                getSupportActionBar().setTitle("Srijan Motosports");
+            }
+        } else if (id == R.id.nav_models) {
+            if (!(currentFragment instanceof ModelsFragment)) {
+                setFragment(new ModelsFragment());
+                getSupportActionBar().setTitle("Models");
+            }
+        } else if (id == R.id.nav_races) {
+            if (!(currentFragment instanceof RacesFragment)) {
+                setFragment(new RacesFragment());
+                getSupportActionBar().setTitle("Races");
+            }
+        } else if (id == R.id.nav_spare_parts) {
+            if (!(currentFragment instanceof SparePartsFragment)) {
+                setFragment(new SparePartsFragment());
+                getSupportActionBar().setTitle("Spare Parts");
+            }
+        } else if (id == R.id.nav_cook_car) {
+            if (!(currentFragment instanceof CookYourCarFragment)) {
+                setFragment(new CookYourCarFragment());
+                getSupportActionBar().setTitle("Cook your car");
+            }
+        } else if (id == R.id.nav_about) {
+            if (!(currentFragment instanceof AboutUsFragment)) {
+                setFragment(new AboutUsFragment());
+                getSupportActionBar().setTitle("About Us");
+            }
+        }
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
     private void setUpNavigationDrawer() {
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -91,38 +133,5 @@ public class HomeActivity extends AppCompatActivity
         transaction.commit();
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            if (!(currentFragment instanceof HomeFragment)) {
-                setFragment(new HomeFragment());
-            }
-        } else if (id == R.id.nav_models) {
-            if (!(currentFragment instanceof ModelsFragment)) {
-                setFragment(new ModelsFragment());
-            }
-        } else if (id == R.id.nav_races) {
-            if (!(currentFragment instanceof RacesFragment)) {
-                setFragment(new RacesFragment());
-            }
-        } else if (id == R.id.nav_spare_parts) {
-            if (!(currentFragment instanceof SparePartsFragment)) {
-                setFragment(new SparePartsFragment());
-            }
-        } else if (id == R.id.nav_cook_car) {
-            if (!(currentFragment instanceof CookYourCarFragment)) {
-                setFragment(new CookYourCarFragment());
-            }
-        } else if (id == R.id.nav_about) {
-            if (!(currentFragment instanceof AboutUsFragment)) {
-                setFragment(new AboutUsFragment());
-            }
-        }
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 }

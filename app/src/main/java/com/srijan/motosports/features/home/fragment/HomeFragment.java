@@ -12,10 +12,14 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.srijan.motosports.R;
 import com.srijan.motosports.app.SrijanApplication;
+import com.srijan.motosports.features.cookyourcar.CookYourCarFragment;
+import com.srijan.motosports.features.home.HomeActivity;
+import com.srijan.motosports.features.models.ModelsFragment;
 import com.srijan.motosports.utils.Utils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -55,6 +59,16 @@ public class HomeFragment extends Fragment {
         imageSliderLayout.stopAutoCycle();
         subscription.unsubscribe();
         super.onStop();
+    }
+
+    @OnClick(R.id.cardViewHomeFragmentBuyRaceCar)
+    void onBuyRaceCarCardClick() {
+        ((HomeActivity) getActivity()).setFragment(new ModelsFragment());
+    }
+
+    @OnClick(R.id.cardViewHomeFragmentCookYourCar)
+    void onCookYourCarCardClick() {
+        ((HomeActivity) getActivity()).setFragment(new CookYourCarFragment());
     }
 
     private void setImageSlider() {

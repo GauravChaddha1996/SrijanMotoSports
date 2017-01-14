@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,18 +17,55 @@
         android:layout_below="@+id/imageSliderLayoutHomeFragment"
         android:background="@drawable/home_fragment_background"
         android:padding="4dp"
-        android:textSize="25sp"
-        android:text="@string/home_fragment_next_race" />
+        android:text="@string/home_fragment_next_race"
+        android:textSize="25sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewHomeFragmentBuyRaceCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_HomeFragment_NextRaceTimer"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:cardCornerRadius="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="@string/homeFragment_buyRaceCar"
+            android:textSize="25sp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewHomeFragmentCookYourCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardViewHomeFragmentBuyRaceCar"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:cardCornerRadius="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="@string/homeFragment_cookYourCar"
+            android:textSize="25sp" />
+    </android.support.v7.widget.CardView>
 
     <TextView
         android:id="@+id/textView_HomeFragment_CallYourRaceEngineer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_HomeFragment_NextRaceTimer"
+        android:layout_alignParentBottom="true"
         android:background="@android:color/holo_blue_light"
-        android:textSize="25sp"
         android:drawableLeft="@drawable/call"
         android:drawablePadding="8dp"
         android:padding="16dp"
-        android:text="@string/home_fragment_call_race_engineer" />
+        android:text="@string/home_fragment_call_race_engineer"
+        android:textSize="25sp" />
+
 </RelativeLayout>
