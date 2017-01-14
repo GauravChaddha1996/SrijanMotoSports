@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -19,6 +20,7 @@ import com.srijan.motosports.database.DataManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -211,5 +213,10 @@ public class CookYourCarFragment extends Fragment implements ItemCheckChangedLis
                 break;
 
         }
+    }
+
+    @OnClick(R.id.buy_now_cookYouCar)
+    void buyNowCookYourCar() {
+        Toast.makeText(getActivity(), "You have purchased the car you have cooked. Enjoy!!", Toast.LENGTH_SHORT).show();
     }
 }

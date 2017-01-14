@@ -11,10 +11,20 @@
         android:layout_height="200dp" />
 
     <TextView
-        android:id="@+id/textView_HomeFragment_NextRaceTimer"
+        android:id="@+id/const_textView_HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageSliderLayoutHomeFragment"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="Greetings gentleman! Good luck for your next race."
+        android:fontFamily="cursive"
+        android:textSize="35sp" />
+    <TextView
+        android:id="@+id/textView_HomeFragment_NextRaceTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/const_textView_HomeFragment"
         android:background="@drawable/home_fragment_background"
         android:padding="4dp"
         android:text="@string/home_fragment_next_race"
@@ -33,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="8dp"
+            android:padding="4dp"
             android:text="@string/homeFragment_buyRaceCar"
             android:textSize="25sp" />
     </android.support.v7.widget.CardView>
@@ -43,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cardViewHomeFragmentBuyRaceCar"
-        android:layout_margin="8dp"
+        android:layout_margin="4dp"
         android:padding="8dp"
         app:cardCornerRadius="@dimen/activity_horizontal_margin">
 
@@ -65,6 +75,7 @@
         android:drawableLeft="@drawable/call"
         android:drawablePadding="8dp"
         android:padding="16dp"
+        android:gravity="center_horizontal"
         android:text="@string/home_fragment_call_race_engineer"
         android:textSize="25sp" />
 

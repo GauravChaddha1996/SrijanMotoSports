@@ -20,7 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginLeft="4dp"
             android:text="Total Amount is: $"
+            android:textStyle="bold"
             android:textSize="20sp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -29,15 +31,40 @@
             android:layout_alignParentBottom="true"
             android:id="@+id/totalAmount_cookYourCar"
             android:textSize="20sp"
+            android:textStyle="bold"
             android:text="1000"/>
 
+
     </RelativeLayout>
+    <TextView
+        android:id="@+id/buy_now_cookYouCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Now"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/buynow_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignBaseline="@+id/const_Cookyourcaritems"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout_cookYourCar"
+        android:id="@+id/const_Cookyourcaritems"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="4dp"
+        android:text="Choose the components"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewCookYourCar"
         android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_blue_light"
         android:layout_height="match_parent"
-        android:layout_below="@+id/frameLayout_cookYourCar" />
+        android:layout_below="@+id/const_Cookyourcaritems" />
 
 </RelativeLayout>

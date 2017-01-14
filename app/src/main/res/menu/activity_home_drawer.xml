@@ -16,7 +16,7 @@
             android:title="Spare parts" />
         <item
             android:id="@+id/nav_cook_car"
-            android:title="Cook your car" />
+            android:title="Cook your own car" />
         <item
             android:id="@+id/nav_about"
             android:title="About us" />

@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_cook_car) {
             if (!(currentFragment instanceof CookYourCarFragment)) {
                 setFragment(new CookYourCarFragment());
-                getSupportActionBar().setTitle("Cook your car");
+                getSupportActionBar().setTitle("Cook your own car");
             }
         } else if (id == R.id.nav_about) {
             if (!(currentFragment instanceof AboutUsFragment)) {

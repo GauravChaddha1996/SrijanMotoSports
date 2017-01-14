@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
@@ -69,6 +70,11 @@ public class HomeFragment extends Fragment {
         ((HomeActivity) getActivity()).navigateToCookYourCar();
     }
 
+    @OnClick(R.id.textView_HomeFragment_CallYourRaceEngineer)
+    void clickCallRaceEngineer() {
+        Toast.makeText(getActivity(),"Calling your Race Engineer",Toast.LENGTH_SHORT).show();
+    }
+
     private void setImageSlider() {
         int resId;
         for (int i = 1; i <= 8; i++) {
@@ -86,7 +92,7 @@ public class HomeFragment extends Fragment {
                 .map(aLong -> raceTime - aLong)
                 .map(Utils::splitToComponentTimes)
                 .map(ints -> ints[0] + " Hrs " + ints[1] + " Min " + ints[2] + " Sec")
-                .map(s -> getString(R.string.home_fragment_next_race) + s)
+                .map(s -> getString(R.string.home_fragment_next_race) +" "+ s)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.immediate())
                 .subscribe(s -> nextRaceTimer.setText(s), Throwable::printStackTrace);

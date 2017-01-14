@@ -18,17 +18,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:textSize="18sp"
                 android:padding="8dp"
                 android:text="Hiper Racing" />
 
             <TextView
                 android:id="@+id/child_description"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/child_title"
                 android:padding="8dp"
-                android:text="Carbon Plastic CFI - 10 inch" />
+                android:layout_marginRight="48dp"
+                android:text="Carbon Plastic CFI - 10 inch"
+                />
 
             <TextView
                 android:id="@+id/child_cost"
