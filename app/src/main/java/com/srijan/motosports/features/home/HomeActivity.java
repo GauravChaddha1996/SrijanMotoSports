@@ -23,10 +23,11 @@ import com.srijan.motosports.features.spareparts.SparePartsFragment;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomeViewInterface {
 
-    Fragment currentFragment;
-    Toolbar toolbar;
-    HomePresenter homePresenter;
-    DrawerLayout drawer;
+    private Fragment currentFragment;
+    private Toolbar toolbar;
+    private HomePresenter homePresenter;
+    private DrawerLayout drawer;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +100,7 @@ public class HomeActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -111,5 +112,12 @@ public class HomeActivity extends AppCompatActivity
         transaction.commit();
     }
 
-
+    public void navigateToModels() {
+        navigationView.setCheckedItem(R.id.nav_models);
+        onNavigationItemSelected(navigationView.getMenu().findItem(R.id.nav_models));
+    }
+    public void navigateToCookYourCar() {
+        navigationView.setCheckedItem(R.id.nav_cook_car);
+        onNavigationItemSelected(navigationView.getMenu().findItem(R.id.nav_cook_car));
+    }
 }

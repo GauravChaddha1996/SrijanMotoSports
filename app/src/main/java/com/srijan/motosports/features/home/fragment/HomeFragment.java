@@ -12,9 +12,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.srijan.motosports.R;
 import com.srijan.motosports.app.SrijanApplication;
-import com.srijan.motosports.features.cookyourcar.CookYourCarFragment;
 import com.srijan.motosports.features.home.HomeActivity;
-import com.srijan.motosports.features.models.ModelsFragment;
 import com.srijan.motosports.utils.Utils;
 
 import butterknife.BindView;
@@ -63,12 +61,12 @@ public class HomeFragment extends Fragment {
 
     @OnClick(R.id.cardViewHomeFragmentBuyRaceCar)
     void onBuyRaceCarCardClick() {
-        ((HomeActivity) getActivity()).setFragment(new ModelsFragment());
+        ((HomeActivity) getActivity()).navigateToModels();
     }
 
     @OnClick(R.id.cardViewHomeFragmentCookYourCar)
     void onCookYourCarCardClick() {
-        ((HomeActivity) getActivity()).setFragment(new CookYourCarFragment());
+        ((HomeActivity) getActivity()).navigateToCookYourCar();
     }
 
     private void setImageSlider() {
