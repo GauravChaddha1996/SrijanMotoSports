@@ -27,7 +27,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ModelsFragment extends Fragment {
+public class ModelsFragment extends Fragment  {
 
     Button modelTSI17SE,modelTSI17KE,modelCookYourCar;
 
@@ -72,9 +72,10 @@ public class ModelsFragment extends Fragment {
         Animation animation_SE = AnimationUtils.loadAnimation(getContext(),R.anim.anim_model_ts117se);
         Animation animation_KE = AnimationUtils.loadAnimation(getContext(),R.anim.anim_model_ts117ke);
         Animation animation_CookCar = AnimationUtils.loadAnimation(getContext(),R.anim.anim_model_cook_car);
+
         modelCookYourCar.startAnimation(animation_CookCar);
-        modelTSI17SE.startAnimation(animation_SE);
         modelTSI17KE.startAnimation(animation_KE);
+        modelTSI17SE.startAnimation(animation_SE);
 
         modelCookYourCar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +102,7 @@ public class ModelsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_models, container, false);
+        return inflater.inflate(R.layout.fragment_models, container,false);
     }
 
 }

@@ -55,11 +55,12 @@
 
     <!--TSI-17_SE Intro strings-->
     <string name="title_tsi17ke">TSI-17-KE</string>
-    <string name="description_tsi_17ke">If you like tinkering with equipments in your garage and tweaking your car as per wishes,
-        we present the perfect model for you. TSI-17 KE.\nThis model gives a chance to owners to work on their own car!\n
+    <string name="description_tsi_17ke">\t\t\tIf you like tinkering with equipments in your garage and tweaking your car as per wishes,
+        we present the perfect model for you. TSI-17 KE.\nThis model gives a chance to owners to work on their own car!\n\t\t\t
         The company provides all the standard, basic components in the form of a kit along with a complete tool set and a
         manual and it is upto the owner to build the car as per his whims! You also have a consulting engineer of our company
-        at your disposal to help you build your dream car and get her roaring in the street.\nTSI-17 KE saves us assembly time as well as the transportation cost; so this model goes easy on the your wallet.
+        at your disposal to help you build your dream car and get her roaring in the street.\n\t\t\tTSI-17 KE saves us assembly time as
+        well as the transportation cost; so this model goes easy on the your wallet.
 </string>
     
     <!-- TODO: Remove or change this placeholder text -->

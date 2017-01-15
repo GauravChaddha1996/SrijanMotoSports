@@ -12,12 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.srijan.motosports.R;
 import com.srijan.motosports.features.about.AboutUsFragment;
 import com.srijan.motosports.features.cookyourcar.CookYourCarFragment;
 import com.srijan.motosports.features.home.fragment.HomeFragment;
 import com.srijan.motosports.features.models.ModelsFragment;
+import com.srijan.motosports.features.models.TSI117KEFragment;
+import com.srijan.motosports.features.models.TSI117SEFragment;
 import com.srijan.motosports.features.races.RacesFragment;
 import com.srijan.motosports.features.spareparts.SparePartsFragment;
 
@@ -28,7 +31,6 @@ public class HomeActivity extends AppCompatActivity
     Toolbar toolbar;
     HomePresenter homePresenter;
     DrawerLayout drawer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,14 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        FragmentManager manager = getSupportFragmentManager();
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }else if(manager.getBackStackEntryCount()>0){
+            super.onBackPressed();
+        }else if(!(currentFragment instanceof HomeFragment)){
+            setFragment(new HomeFragment());
+        }else{
             super.onBackPressed();
         }
     }
@@ -87,6 +94,7 @@ public class HomeActivity extends AppCompatActivity
         currentFragment = fragment;
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
+        manager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         transaction.replace(R.id.frame_layout_home, fragment);
         transaction.commit();
     }

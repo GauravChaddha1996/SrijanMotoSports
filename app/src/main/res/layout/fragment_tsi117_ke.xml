@@ -2,177 +2,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.srijan.motosports.features.models.TSI117SEFragment">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.srijan.motosports.features.models.TSI117KEFragment">
 
-    <ViewFlipper
+    <com.daimajia.slider.library.SliderLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:autoStart="true"
-        android:id="@+id/tsi17se_viewflipper"
-        android:layout_margin="@dimen/about_description"
-        android:flipInterval="1500">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tsise01" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tsise02" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tsise03" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tsise04" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tsise05" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tsise06" />
-
-    </ViewFlipper>
+        android:id="@+id/tsi17ke_viewflipper"
+        android:layout_margin="@dimen/about_description">
+    </com.daimajia.slider.library.SliderLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:text="@string/title_tsi17se"
+        android:text="@string/title_tsi17ke"
         android:gravity="center"
         android:textStyle="bold"
-        android:id="@+id/text_title_tsi17se"
-        android:layout_below="@id/tsi17se_viewflipper"
+        android:id="@+id/text_title_tsi17ke"
+        android:layout_below="@id/tsi17ke_viewflipper"
         />
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_title_tsi17se">
+        android:layout_below="@+id/text_title_tsi17ke">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            
             <TextView
                 android:layout_width="match_parent"
-                android:text="@string/model_engine_title"
-                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/description_tsi_17ke"
                 android:textSize="20sp"
-                android:layout_marginBottom="@dimen/about_description"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:textStyle="italic"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/engine_details_tsi17se"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/model_chassis_title"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="italic"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/chassis_details_tsi17se"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/model_suspension_title"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="italic"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/suspension_details_tsi17se"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/model_bodyworks_title"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="italic"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/bodyworks_details_tsi17se"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/model_electronics_title"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="italic"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="@dimen/about_description"
-                android:text="@string/electronics_details_tsi17se"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/price_tsi17se"
-                android:textSize="22sp"
-                android:textStyle="bold|italic"
-                android:textAlignment="center"
+                android:layout_margin="@dimen/activity_horizontal_margin"
                 />
 
             <Button
-                android:layout_width="match_parent"
+                android:id="@+id/button_buynow_tsike"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:padding="18dp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/shape_buynow"
                 android:text="@string/buy_now"/>
 
         </LinearLayout>
