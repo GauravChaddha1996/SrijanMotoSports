@@ -1,14 +1,11 @@
 package com.srijan.motosports.features.models;
 
 
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.widget.Button;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,10 +16,6 @@ import android.widget.Button;
 import com.srijan.motosports.R;
 import com.srijan.motosports.features.cookyourcar.CookYourCarFragment;
 import com.srijan.motosports.features.home.HomeActivity;
-
-import butterknife.OnClick;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,6 +34,7 @@ public class ModelsFragment extends Fragment  {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout_home, fragment);
         fragmentTransaction.addToBackStack(null);
+        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("Cook your own car");
         fragmentTransaction.commit();
     }
 
@@ -50,6 +44,7 @@ public class ModelsFragment extends Fragment  {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout_home, fragment);
         fragmentTransaction.addToBackStack(null);
+        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("TS17SE");
         fragmentTransaction.commit();
     }
 
@@ -58,6 +53,7 @@ public class ModelsFragment extends Fragment  {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout_home, fragment);
+        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("TS17KE");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
@@ -102,6 +98,7 @@ public class ModelsFragment extends Fragment  {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
+        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("Models");
         return inflater.inflate(R.layout.fragment_models, container,false);
     }
 
