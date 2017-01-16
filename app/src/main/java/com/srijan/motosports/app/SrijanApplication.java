@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.srijan.motosports.app;
 
 import android.app.Application;
