@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.srijan.motosports.features.models.TSI117KEFragment">
+
+    <com.daimajia.slider.library.SliderLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/tsi17ke_viewflipper"
+        android:layout_margin="@dimen/about_description">
+    </com.daimajia.slider.library.SliderLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/title_tsi17ke"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/text_title_tsi17ke"
+        android:layout_below="@id/tsi17ke_viewflipper"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_title_tsi17ke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_tsi_17ke"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                />
+
+            <Button
+                android:id="@+id/button_buynow_tsike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:padding="18dp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/shape_buynow"
+                android:text="@string/buy_now"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -46,9 +46,12 @@ public class HomeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            moveTaskToBack(true);
-            //super.onBackPressed();
+        }else if(manager.getBackStackEntryCount()>0){
+            super.onBackPressed();
+        }else if(!(currentFragment instanceof HomeFragment)){
+            setFragment(new HomeFragment());
+        }else{
+            super.onBackPressed();
         }
     }
 

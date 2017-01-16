@@ -2,12 +2,67 @@
     <string name="app_name">Srijan</string>
     <string name="login_continue">Click here to continue to Home activity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="title_fragment_about">About Us</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="buy_now">Buy Now</string>
     <string name="action_settings">Settings</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- All about-us strings -->
+    <string name="title_about">Srijan</string>
+    <string name="subtitle_about">MotoSports</string>
+    <string name="about_description">\t\t\tSrijan Motorsports Incorporated is a leading name in India as a
+        manufacturer of Formula race cars. The company is a home to innovators with a vision and passion
+        in race car design and manufacturing. For almost a decade now, the company has been relentlessly
+        working on producing Formula cars to meet the expectations of the people passionate about Formula racing.
+        So far, we have successfully launched 6 successive models of race cars.</string>
+    <string name="about_latest_model_title">We are all set to launch its latest model, TSI-17.</string>
+    <string name="about_tsi117_model">\t\t\tOur model, TSI-17, comes in two chief variations namely, TSI-17
+        SE and TSI-17 KE. Along with this, we are giving our customers a chance to “cook up their own race car”.
+        This allows you to choose different car components from among the variants provided by us. </string>
+    <string name="about_formula_challenge_title">Srijan Formula Challenge</string>
+    <string name="about_formula_challenge_description">\t\t\tAs a Formula car manufacturing company, we are
+        not just interested in making cars but we aim to change the scenario of Motorsports racing in
+        our country. With Srijan Formula Challenge, we aim to bring together all racing enthusiasts who
+        share the same passion for race cars. This would provide a platform to all budding racers to test
+        their mettle in the national arena.\n\n\t\t\tWe would be organising a minimum of 24 races annually
+        with at least 2 races being held each month on the tracks of Kari Motor Speedway, Coimbatore,
+        and MMSC Chennai, Tamil Nadu. In addition to the enthralling experience, the winner and the participants
+        are in for exciting rewards and prizes.</string>
+
+    <!-- model strings-->
+    <string name="model_engine_title">Engine and Drivetrain </string>
+    <string name="model_chassis_title">Chassis</string>
+    <string name="model_suspension_title">Suspension</string>
+    <string name="model_bodyworks_title">Bodyworks</string>
+    <string name="model_electronics_title">Electronics</string>
+
+    <!--TSI-17_SE Intro strings-->
+    <string name="title_tsi17se">TSI-17-SE</string>
+    <string name="intro_tsi17se">Professional or amateur. If you are looking for a car to meet the standard
+        of your dream car that would set the tracks on fire, here is your stop! This model launched by our
+        company is the epitome of innovation and engineering and does true justice to your passion.</string>
+    <string name="engine_details_tsi17se">KTM Duke 390cc Engine (42 Bhp), Quaife Limited Slip Differential,
+        Chain drive), paddle  shifter</string>
+    <string name="chassis_details_tsi17se">Tubular Space frame chassis. 1020 AISI Mild steel</string>
+    <string name="suspension_details_tsi17se">Double wishbone with Ohlins TTX36 damper, 10\” OZ racing wheels, 10\”
+        Hoosier tires.</string>
+    <string name="bodyworks_details_tsi17se">Carbon fiber bodyworks with CFRP seats and steering wheel.</string>
+    <string name="electronics_details_tsi17se">In board Data Acquisition System with tunable ECU (5 Preloaded Maps).</string>
+    <string name="price_tsi17se">Price : Rs.10,00,000</string>
+
+    <!--TSI-17_SE Intro strings-->
+    <string name="title_tsi17ke">TSI-17-KE</string>
+    <string name="description_tsi_17ke">\t\t\tIf you like tinkering with equipments in your garage and tweaking your car as per wishes,
+        we present the perfect model for you. TSI-17 KE.\nThis model gives a chance to owners to work on their own car!\n\t\t\t
+        The company provides all the standard, basic components in the form of a kit along with a complete tool set and a
+        manual and it is upto the owner to build the car as per his whims! You also have a consulting engineer of our company
+        at your disposal to help you build your dream car and get her roaring in the street.\n\t\t\tTSI-17 KE saves us assembly time as
+        well as the transportation cost; so this model goes easy on the your wallet.
+</string>
+    
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_fragment_call_race_engineer">Call your race engineer</string>

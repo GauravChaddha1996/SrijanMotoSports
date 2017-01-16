@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.srijan.motosports.database;
 
 import com.srijan.motosports.database.models.CookYouCarItemChild;
@@ -125,3 +126,22 @@ public class DataManager {
     }
 }
 
+=======
+package com.srijan.motosports.database;
+
+public class DataManager {
+    private static DataManager dataManager;
+
+    private DataManager() {
+
+    }
+
+    public static DataManager getDataManager() {
+        if (dataManager == null) {
+            dataManager = new DataManager();
+        }
+        return dataManager;
+    }
+}
+
+>>>>>>> master
