@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:textAlignment="viewEnd"
+        android:inputType="number"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="24dp">
