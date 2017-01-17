@@ -28,8 +28,6 @@ public class HomeFragment extends Fragment {
     final long raceTime = 60 * 60 * 5;
     @BindView(R.id.imageSliderLayoutHomeFragment)
     SliderLayout imageSliderLayout;
-    @BindView(R.id.textView_HomeFragment_NextRaceTimer)
-    TextView nextRaceTimer;
     Subscription subscription;
 
     public HomeFragment() {
@@ -51,24 +49,12 @@ public class HomeFragment extends Fragment {
     public void onStart() {
         super.onStart();
         imageSliderLayout.startAutoCycle();
-        listenToRaceTimer();
     }
 
     @Override
     public void onStop() {
         imageSliderLayout.stopAutoCycle();
-        subscription.unsubscribe();
         super.onStop();
-    }
-
-    @OnClick(R.id.cardViewHomeFragmentBuyRaceCar)
-    void onBuyRaceCarCardClick() {
-        ((HomeActivity) getActivity()).navigateToModels();
-    }
-
-    @OnClick(R.id.cardViewHomeFragmentCookYourCar)
-    void onCookYourCarCardClick() {
-        ((HomeActivity) getActivity()).navigateToCookYourCar();
     }
 
     @OnClick(R.id.textView_HomeFragment_CallYourRaceEngineer)
@@ -86,17 +72,6 @@ public class HomeFragment extends Fragment {
             imageSliderLayout.addSlider(defaultSliderView);
         }
         imageSliderLayout.setPresetTransformer(SliderLayout.Transformer.ZoomOut);
-    }
-
-    private void listenToRaceTimer() {
-        subscription = SrijanApplication.getRaceTimerObservable()
-                .map(aLong -> raceTime - aLong)
-                .map(Utils::splitToComponentTimes)
-                .map(ints -> ints[0] + " Hrs " + ints[1] + " Min " + ints[2] + " Sec")
-                .map(s -> getString(R.string.home_fragment_next_race) +" "+ s)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.immediate())
-                .subscribe(s -> nextRaceTimer.setText(s), Throwable::printStackTrace);
     }
 
 }

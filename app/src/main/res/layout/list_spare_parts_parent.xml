@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/cardview_dark_background"
+    android:background="@color/colorPrimary"
     tools:context="com.srijan.motosports.features.spareparts.SparePartsFragment"
     >
 
@@ -15,17 +15,17 @@
         android:layout_marginLeft="5dp"
         android:layout_weight="1"
         android:text="SpareParts"
-        style="@android:style/Theme.Material"
         android:textSize="24sp" />
 
 
     <ImageView
-        android:id="@+id/parent_list_item_expand_arrow"
+        android:id="@+id/parent_expand_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_gravity="center"
-        android:src="@android:drawable/arrow_down_float"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/arrow_down"
         />
 
 </LinearLayout>

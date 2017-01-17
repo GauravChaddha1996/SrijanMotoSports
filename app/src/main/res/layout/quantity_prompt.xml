@@ -19,7 +19,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter Quantity:"
-            android:textSize="30sp"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
     </LinearLayout>
 
@@ -30,9 +32,10 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:textAlignment="viewEnd"
+        android:gravity="end"
         android:inputType="number"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="24dp">
 
         <requestFocus />
