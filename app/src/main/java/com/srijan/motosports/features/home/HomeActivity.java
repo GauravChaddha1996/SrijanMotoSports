@@ -7,9 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.srijan.motosports.R;
@@ -20,6 +22,8 @@ import com.srijan.motosports.features.models.ModelsFragment;
 import com.srijan.motosports.features.races.RacesFragment;
 import com.srijan.motosports.features.spareparts.SparePartsFragment;
 import com.srijan.motosports.features.subscribe.SubscribeFragment;
+
+import static com.srijan.motosports.R.mipmap.app_icon;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomeViewInterface {
@@ -37,6 +41,7 @@ public class HomeActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         homePresenter = new HomePresenter(this);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(app_icon);
         setUpNavigationDrawer();
         setFragment(new HomeFragment());
         getSupportActionBar().setTitle("Srijan Motosports");

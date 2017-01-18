@@ -4,6 +4,7 @@ package com.srijan.motosports.features.spareparts;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.srijan.motosports.R;
+import com.srijan.motosports.features.home.HomeActivity;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -25,7 +27,6 @@ public class SparePartsFragment extends Fragment {
     public SparePartsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,7 +84,7 @@ public class SparePartsFragment extends Fragment {
         images[2]="ecu_2";
         spChild[0] = new SparePartsChildItem("Stock ECU","Lower,$153",153,images[0]);
         spChild[1] = new SparePartsChildItem("Race Dynamics ECU with GFRP","Standard,$275",275,images[1]);
-        spChild[2] = new SparePartsChildItem("Race Dynamics ECU with CFRP","Higher,$350",350,images[2]);
+        spChild[2] = new SparePartsChildItem("Race Dynamics ECU with CFRP","Higher,$350",350,image);
 
         ArrayList<SparePartsChildItem> spChildItems3 = new ArrayList<SparePartsChildItem>();
         spChildItems3.add(spChild[0]);
@@ -124,7 +125,14 @@ public class SparePartsFragment extends Fragment {
         SparePartsAdapter sparePartsAdapter = new SparePartsAdapter(getContext(),sparePartsItems);
         rvItems.setLayoutManager(new LinearLayoutManager(getContext()));
         rvItems.setAdapter(sparePartsAdapter);
-        return sparePartsView;
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("Spare parts");
+        return inflater.inflate(R.layout.fragment_spare_parts, container,false);
     }
 
 }

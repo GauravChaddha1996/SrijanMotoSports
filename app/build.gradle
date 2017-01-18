@@ -9,7 +9,7 @@ android {
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.srijan.motosports"
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -17,8 +17,11 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
         }
     }
     compileOptions {
