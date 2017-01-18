@@ -34,18 +34,13 @@ public class HomeActivity extends AppCompatActivity
     private NavigationView navigationView;
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.ho++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++me,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         homePresenter = new HomePresenter(this);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(app_icon);
         setUpNavigationDrawer();
         setFragment(new HomeFragment());
         getSupportActionBar().setTitle("Srijan Motosports");
