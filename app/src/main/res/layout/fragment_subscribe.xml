@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sub_back"
+    android:scrollbars="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <TextView
+        android:text="To help serve our customers better, we have put together some subscription packages so that you can pursue your ambitions and passion in a hassle free manner. For a reasonable amount of money, we would be providing you an opportunity to take part in races over a certain period of time. We have three packages namely-"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textStyle="normal|bold|italic" />
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/pack">
+    <RadioButton
+        android:text=" Platinum Package-  cost- 120000                                           Package validity- 3 years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton" />
+
+    <RadioButton
+        android:text="Diamond Package- Cost- 80000                                         Package validity- 2 years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton2" />
+
+    <RadioButton
+        android:text="Silver Package- Cost- 40000                                    Package validity- 1 year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton3" />
+</RadioGroup>
+    <Button
+        android:text="Subscribe Now!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
+
+    <TextView
+        android:text="Along with name and fame involved with winning such competitions, we will also we providing the following cash prizes to the winner-\n 1.    1st prize winner- Rs 5,00,000.\n 2.    2nd prize winner- Rs 4,00,000.\n 3.    3rd prize winner- Rs 3,00,000.\n 4.    4th to 10th position holders- Goodies.(Worth 3 lakhs) \n Extra benefits for buying our car \n1)      A free race engineer is provided (24*7) .\n 2)      Free Maintainance for 3 months \n3)      Guarantee for 1 year \n4)      Free testing  ( Dyno Testing)  \n Services provided  on buying the TSI 17 SE \n1)      A free race engineer is provided(24*7)\n 2)      Free maintainance for  1  year \n3)      Guarantee for 1 year\n 4)      Free testing  ( Dyno Testing)\n Services provided on buying the TSI 17 KE\n 1)      A free Race engineer is provided(24*7)\n 2)      Free maintainance for 6 months\n 3)      Guarantee for 1 year\n 4)      Free testing (Dyno Testing) Servicing cost – Rs 5,000 on each service "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:textStyle="normal|bold"
+        android:scrollbars="none|vertical" />
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

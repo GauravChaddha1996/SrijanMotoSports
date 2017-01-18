@@ -19,6 +19,7 @@ import com.srijan.motosports.features.home.fragment.HomeFragment;
 import com.srijan.motosports.features.models.ModelsFragment;
 import com.srijan.motosports.features.races.RacesFragment;
 import com.srijan.motosports.features.spareparts.SparePartsFragment;
+import com.srijan.motosports.features.subscribe.SubscribeFragment;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomeViewInterface {
@@ -91,6 +92,12 @@ public class HomeActivity extends AppCompatActivity
             if (!(currentFragment instanceof AboutUsFragment)) {
                 setFragment(new AboutUsFragment());
                 getSupportActionBar().setTitle("About Us");
+            }
+        }
+        else if (id == R.id.nav_subscribe) {
+            if (!(currentFragment instanceof SubscribeFragment)) {
+                setFragment(new SubscribeFragment());
+                getSupportActionBar().setTitle("Subscribe!");
             }
         }
         drawer.closeDrawer(GravityCompat.START);
