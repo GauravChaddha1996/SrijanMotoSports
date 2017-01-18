@@ -4,10 +4,8 @@
     android:background="@drawable/cook_your_car_background"
     android:orientation="horizontal"
     android:fadingEdge="horizontal">
-    <ImageButton
-        android:layout_width="70dp"
-        android:layout_height="match_parent"
-        android:id="@+id/child_img"/>
+
+
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -19,6 +17,8 @@
             <ImageButton
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:src="@drawable/damper_1"
+                android:scaleType="centerCrop"
                 android:id="@+id/child_img"
                 android:paddingRight="@dimen/activity_horizontal_margin"/>
 

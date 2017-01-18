@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/cardview_dark_background"
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:text="To contact us:
-        Email Id: teamsrijan@gmail.com
-        Phone: +91 9076789678
-        Thank You!"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/textView2"
-        android:layout_weight="1"
-        android:background="@drawable/buynow_background"
-        android:textColor="@color/cardview_dark_background"
-        android:textSize="24sp" />
-</LinearLayout>
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="To contact us:\nEmail Id: teamsrijan@gmail.com\nPhone: +91 9076789678\nThank You!"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

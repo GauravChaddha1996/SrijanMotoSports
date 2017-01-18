@@ -3,23 +3,26 @@ package com.srijan.motosports.features.spareparts;
 /**
  * Created by pari on 15-01-2017.
  */
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
+import android.os.Build;
 import android.support.v7.app.AlertDialog;
-import android.view.ViewGroup;
-import java.util.List;
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
-import android.content.DialogInterface;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ImageView;
 
 import com.srijan.motosports.R;
+
+import java.util.List;
 
 public class SparePartsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     List<Object> items;
@@ -178,20 +181,24 @@ public class SparePartsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         }
     }
 
-    private void configureViewHolder2(ViewHolder_Child vh2,int position) {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void configureViewHolder2(ViewHolder_Child vh2, int position) {
         SparePartsChildItem child = (SparePartsChildItem)items.get(position);
         if(child!=null)
         {
             vh2.getHeading().setText(child.heading);
             vh2.getDetails().setText(child.details);
-            String image = child.image;
+            Drawable ob2 = context.getDrawable(context.getResources().getIdentifier(child.image,"drawable",
+                    context.getPackageName()));
+            vh2.getImage().setImageDrawable(ob2);
+           /* String image = child.image;
             String uri = "@drawable/"+image;
             Drawable res;
             int imageResource = context.getResources().getIdentifier(uri, null, context.getPackageName());
             Drawable ob = context.getResources().getDrawable(imageResource);
             Drawable ob2 = ob;
             ob = resize(ob);
-            vh2.getImage().setImageDrawable(ob);
+            vh2.getImage().setImageDrawable(ob);*/
             vh2.getImage().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

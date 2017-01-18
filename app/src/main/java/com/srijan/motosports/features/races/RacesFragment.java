@@ -1,7 +1,7 @@
 package com.srijan.motosports.features.races;
 
 
-import android.content.DialogInterface;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,17 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.content.Context;
 import android.widget.TextView;
 
+import com.srijan.motosports.R;
 import com.srijan.motosports.app.SrijanApplication;
 import com.srijan.motosports.features.home.HomeActivity;
-
-import com.srijan.motosports.R;
 import com.srijan.motosports.utils.Utils;
 
-import butterknife.BindView;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -59,7 +55,7 @@ public class RacesFragment extends Fragment {
                         context);
                 // set dialog message
                 alertDialogBuilder.setView(promptsView);
-                alertDialogBuilder
+                /*alertDialogBuilder
                         .setCancelable(false)
                         .setNegativeButton("Return",
                                 new DialogInterface.OnClickListener() {
@@ -67,7 +63,7 @@ public class RacesFragment extends Fragment {
                                         dialog.cancel();
                                     }
                                 });
-
+*/
                 // create alert dialog
                 AlertDialog alertDialog = alertDialogBuilder.create();
 

@@ -22,16 +22,23 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
+        android:background="@drawable/shape_buynow"
         android:layout_alignParentStart="true"
-        android:id="@+id/enterRace" />
+        android:layout_margin="4dp"
+        android:padding="8dp"
+        android:id="@+id/enterRace"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:text="Race Stats"
         android:layout_width="wrap_content"
+        android:padding="8dp"
         android:layout_height="50dp"
         android:layout_alignBottom="@+id/enterRace"
+        android:layout_margin="4dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_buynow"
         android:id="@+id/raceStats" />
     <TextView
         android:layout_width="match_parent"
@@ -39,8 +46,10 @@
         android:layout_below="@+id/raceStats"
         android:id="@+id/timer"
         android:padding="4dp"
+        android:layout_marginTop="8dp"
         android:text="@string/home_fragment_next_race"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:background="@drawable/home_fragment_background"/>
 
     <ImageView
@@ -48,11 +57,12 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/karimotorspeedway"
         android:id="@+id/imageView3"
+        android:scaleType="center"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/timer" />
 
     <TextView
-        android:text="Srijan Formula Challenge
+        android:text="Srijan Formula Challenge :
 A total of 24 races shall be held in a year. The races shall be held at least 2 times in a month on the tracks of Kari Motor Speedway, Coimbatore, and MMSC ChenNai Tamil Nadu.
 All races held under this racing series shall feature Formula race cars manufactured by Srijan Motorsports.
 Drivers must register under a team name.
@@ -61,8 +71,11 @@ Exciting prizes shall be awarded after every 6 races depending upon the performa
 "
         android:layout_width="match_parent"
         android:id="@+id/textView"
+        android:textSize="18sp"
+        android:padding="8dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView3"
+        android:fontFamily="casual"
         android:textStyle="normal|italic" />
         </RelativeLayout>
     </ScrollView>

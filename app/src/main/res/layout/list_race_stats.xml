@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="8dp"
     android:background="@drawable/buynow_background">
 
     <TextView
@@ -46,12 +48,13 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/driver"
-
+            android:layout_margin="8dp"
             android:id="@+id/driverImg"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/driver"
+            android:layout_margin="8dp"
             android:text="driver's name"
             android:textSize="18dp"/>
     </LinearLayout>
