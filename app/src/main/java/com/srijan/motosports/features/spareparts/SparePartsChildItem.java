@@ -7,8 +7,8 @@ import android.graphics.Bitmap;
 public class SparePartsChildItem {
     String heading,details;
     double price;
-    Bitmap image;
-    SparePartsChildItem(String heading, String details, double price,Bitmap image)
+    String image;
+    SparePartsChildItem(String heading, String details, double price,String image)
     {
         this.heading=heading;
         this.details=details;
@@ -27,8 +27,8 @@ public class SparePartsChildItem {
     {
         return price;
     }
-    Bitmap getImage(){return image;}
-    public void setImage(Bitmap image){this.image = image;}
+    String getImage(){return image;}
+    public void setImage(String image){this.image = image;}
 
     public void setDetails(String details) {
         this.details = details;

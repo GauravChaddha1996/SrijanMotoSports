@@ -1,14 +1,71 @@
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.srijan.motosports.features.races.RacesFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:text="Enter Race Now!"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/enterRace" />
+
+    <Button
+        android:text="Race Stats"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/enterRace"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/raceStats" />
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/raceStats"
+        android:id="@+id/timer"
+        android:padding="4dp"
+        android:text="@string/home_fragment_next_race"
+        android:textSize="18sp"
+        android:background="@drawable/home_fragment_background"/>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="This is races fragment"
-        android:textSize="25sp" />
+        app:srcCompat="@drawable/karimotorspeedway"
+        android:id="@+id/imageView3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timer" />
 
+    <TextView
+        android:text="Srijan Formula Challenge
+A total of 24 races shall be held in a year. The races shall be held at least 2 times in a month on the tracks of Kari Motor Speedway, Coimbatore, and MMSC ChenNai Tamil Nadu.
+All races held under this racing series shall feature Formula race cars manufactured by Srijan Motorsports.
+Drivers must register under a team name.
+After every race, the points table shall be updated to be viewed by every registered user on our website as well as mobile app.
+Exciting prizes shall be awarded after every 6 races depending upon the performances.
+"
+        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:textStyle="normal|italic" />
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
+
+

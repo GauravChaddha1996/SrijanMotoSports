@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buynow_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/carName"
+        android:text="car name"
+        android:textSize="18dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/points"
+        android:layout_alignRight="@+id/carName"
+        android:text="points"
+        android:textSize="18dp"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numRaces"
+        android:layout_below="@+id/carName"
+        android:text="number of races"
+        android:textSize="14dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lapTime"
+        android:layout_below="@+id/points"
+        android:layout_alignParentEnd="true"
+        android:text="fastest lap time"
+        android:textSize="14dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/gap"
+        android:layout_below="@+id/points"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/gap">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/driver"
+
+            android:id="@+id/driverImg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver"
+            android:text="driver's name"
+            android:textSize="18dp"/>
+    </LinearLayout>
+</RelativeLayout>

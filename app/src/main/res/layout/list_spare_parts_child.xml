@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#cbcbcb"
-    android:orientation="horizontal">
+    android:background="@drawable/cook_your_car_background"
+    android:orientation="horizontal"
+    android:fadingEdge="horizontal">
     <ImageButton
         android:layout_width="70dp"
         android:layout_height="match_parent"

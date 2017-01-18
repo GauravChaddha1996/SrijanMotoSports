@@ -184,9 +184,12 @@ public class SparePartsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         {
             vh2.getHeading().setText(child.heading);
             vh2.getDetails().setText(child.details);
-            Bitmap bitmap = child.image;
-            BitmapDrawable ob = new BitmapDrawable(context.getResources(), bitmap);
-            BitmapDrawable ob2 = ob;
+            String image = child.image;
+            String uri = "@drawable/"+image;
+            Drawable res;
+            int imageResource = context.getResources().getIdentifier(uri, null, context.getPackageName());
+            Drawable ob = context.getResources().getDrawable(imageResource);
+            Drawable ob2 = ob;
             ob = resize(ob);
             vh2.getImage().setImageDrawable(ob);
             vh2.getImage().setOnClickListener(new View.OnClickListener() {
