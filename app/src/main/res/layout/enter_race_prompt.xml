@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="To contact us:\nEmail Id: teamsrijan@gmail.com\nPhone: +91 9076789678\nThank You!"
+            android:text="To contact us:\nEmail Id: teamsrijan@gmail.com\nPhone: +91 9955419826\nThank You!"
             android:textColor="@color/cardview_dark_background"
             android:textSize="24sp" />
     </RelativeLayout>

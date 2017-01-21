@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginBottom="39dp">
 
 <RelativeLayout
@@ -39,7 +40,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:background="@drawable/shape_buynow"
-        android:id="@+id/raceStats" />
+        android:id="@+id/raceStats"
+        android:layout_alignParentRight="true" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -59,13 +61,14 @@
         android:id="@+id/imageView3"
         android:scaleType="center"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/timer" />
+        android:layout_below="@+id/timer"
+        android:layout_alignParentLeft="true" />
 
     <TextView
-        android:text="Srijan Formula Challenge :
-A total of 24 races shall be held in a year. The races shall be held at least 2 times in a month on the tracks of Kari Motor Speedway, Coimbatore, and MMSC ChenNai Tamil Nadu.
-All races held under this racing series shall feature Formula race cars manufactured by Srijan Motorsports.
-Drivers must register under a team name.
+        android:text="
+At least 12 races shall be held in a year. The races shall be held at least 2 times in a month on the tracks of Kari Motor Speedway, Coimbatore.
+Most races held under this racing series shall feature Formula race cars manufactured by Srijan Motorsports.
+Drivers should preferably register under a team name.
 After every race, the points table shall be updated to be viewed by every registered user on our website as well as mobile app.
 Exciting prizes shall be awarded after every 6 races depending upon the performances.
 "
@@ -74,10 +77,23 @@ Exciting prizes shall be awarded after every 6 races depending upon the performa
         android:textSize="18sp"
         android:padding="8dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
         android:fontFamily="casual"
-        android:textStyle="normal|italic" />
-        </RelativeLayout>
+        android:textStyle="normal|italic"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignLeft="@+id/enterRace"
+        android:layout_alignStart="@+id/enterRace"
+        android:layout_marginTop="74dp" />
+
+    <TextView
+        android:text="Srijan Formula Challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginBottom="63dp"
+        android:id="@+id/textView16"
+        android:textStyle="normal|bold|italic"
+        android:textSize="24sp" />
+</RelativeLayout>
     </ScrollView>
 </RelativeLayout>
 

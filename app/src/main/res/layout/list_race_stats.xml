@@ -19,7 +19,8 @@
         android:layout_alignRight="@+id/carName"
         android:text="points"
         android:textSize="18dp"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +35,8 @@
         android:layout_below="@+id/points"
         android:layout_alignParentEnd="true"
         android:text="fastest lap time"
-        android:textSize="14dp"/>
+        android:textSize="14dp"
+        android:layout_alignParentRight="true" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"

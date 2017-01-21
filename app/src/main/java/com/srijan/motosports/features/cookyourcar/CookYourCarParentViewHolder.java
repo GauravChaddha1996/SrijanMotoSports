@@ -1,5 +1,6 @@
 package com.srijan.motosports.features.cookyourcar;
 
+import android.graphics.Typeface;
 import android.view.View;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -27,6 +28,7 @@ public class CookYourCarParentViewHolder extends GroupViewHolder{
     public CookYourCarParentViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
+
     }
 
     @Override

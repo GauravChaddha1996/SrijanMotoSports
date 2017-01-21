@@ -7,6 +7,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -173,6 +174,8 @@ public class SparePartsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         SparePartsItem parent = (SparePartsItem) items.get(position);
         if (parent != null) {
             vh1.getName().setText(parent.name);
+            Typeface face= Typeface.createFromAsset(context.getAssets(), "font/finalFont.ttf");
+            vh1.getName().setTypeface(face);
          //   vh1.setImageView().setText("Hometown: " + user.hometown);
             /*Bitmap bitmap = parent.image;
             BitmapDrawable ob = new BitmapDrawable(context.getResources(), bitmap);
@@ -188,6 +191,8 @@ public class SparePartsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         {
             vh2.getHeading().setText(child.heading);
             vh2.getDetails().setText(child.details);
+            Typeface face= Typeface.createFromAsset(context.getAssets(), "font/finalFont.ttf");
+            vh2.getHeading().setTypeface(face);
             Drawable ob2 = context.getDrawable(context.getResources().getIdentifier(child.image,"drawable",
                     context.getPackageName()));
             vh2.getImage().setImageDrawable(ob2);

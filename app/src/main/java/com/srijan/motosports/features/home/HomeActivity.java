@@ -1,5 +1,6 @@
 package com.srijan.motosports.features.home;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.srijan.motosports.R;
 import com.srijan.motosports.features.about.AboutUsFragment;
@@ -22,6 +24,7 @@ import com.srijan.motosports.features.models.ModelsFragment;
 import com.srijan.motosports.features.races.RacesFragment;
 import com.srijan.motosports.features.spareparts.SparePartsFragment;
 import com.srijan.motosports.features.subscribe.SubscribeFragment;
+import com.srijan.motosports.features.contact.ContactUsFragment;
 
 import static com.srijan.motosports.R.mipmap.app_icon;
 
@@ -44,7 +47,10 @@ public class HomeActivity extends AppCompatActivity
         getSupportActionBar().setIcon(app_icon);
         setUpNavigationDrawer();
         setFragment(new HomeFragment());
-        getSupportActionBar().setTitle("Srijan Motosports");
+        getSupportActionBar().setTitle("Srijan Motorsports");
+        /*TextView t = (TextView)findViewById(R.id.textView_HomeFragment_CallYourRaceEngineer);
+        Typeface face= Typeface.createFromAsset(getAssets(), "font/finalFont.ttf");
+        t.setTypeface(face);*/
     }
 
     @Override
@@ -103,6 +109,12 @@ public class HomeActivity extends AppCompatActivity
             if (!(currentFragment instanceof SubscribeFragment)) {
                 setFragment(new SubscribeFragment());
                 getSupportActionBar().setTitle("Subscribe!");
+            }
+        }
+        else if (id == R.id.nav_contact_us) {
+            if (!(currentFragment instanceof ContactUsFragment)) {
+                setFragment(new ContactUsFragment());
+                getSupportActionBar().setTitle("Contact Us");
             }
         }
         drawer.closeDrawer(GravityCompat.START);

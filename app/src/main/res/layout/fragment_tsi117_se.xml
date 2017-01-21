@@ -39,9 +39,11 @@
                 android:textSize="20sp"
                 android:layout_marginBottom="@dimen/about_description"
                 android:gravity="center"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/t1"/>
 
             <TextView
+                android:id="@+id/t2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
@@ -52,6 +54,7 @@
                 />
 
             <TextView
+                android:id="@+id/t3"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="@dimen/about_description"
                 android:text="@string/model_chassis_title"
@@ -61,6 +64,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/t4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
@@ -71,6 +75,7 @@
                 />
 
             <TextView
+                android:id="@+id/t5"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="@dimen/about_description"
                 android:text="@string/model_suspension_title"
@@ -80,6 +85,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/t6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
@@ -90,6 +96,7 @@
                 />
 
             <TextView
+                android:id="@+id/t7"
                 android:layout_width="match_parent"
                 android:text="@string/model_bodyworks_title"
                 android:textStyle="bold"
@@ -99,6 +106,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/t8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
@@ -109,6 +117,7 @@
                 />
 
             <TextView
+                android:id="@+id/t9"
                 android:layout_width="match_parent"
                 android:text="@string/model_electronics_title"
                 android:textStyle="bold"
@@ -118,6 +127,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/t10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
@@ -128,6 +138,7 @@
                 />
 
             <TextView
+                android:id="@+id/t11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/price_tsi17se"

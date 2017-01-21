@@ -2,6 +2,7 @@ package com.srijan.motosports.features.races;
 
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -44,6 +45,9 @@ public class RacesFragment extends Fragment {
         Button enterRace = (Button)v.findViewById(R.id.enterRace);
         Button raceStats = (Button)v.findViewById(R.id.raceStats);
         nextRaceTimer = (TextView)v.findViewById(R.id.timer);
+        TextView t = (TextView)v.findViewById(R.id.textView16);
+        Typeface face= Typeface.createFromAsset(getContext().getAssets(), "font/finalFont.ttf");
+        t.setTypeface(face);
         Context context = getContext();
         enterRace.setOnClickListener(new View.OnClickListener() {
             @Override

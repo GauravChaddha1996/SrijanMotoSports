@@ -1,5 +1,5 @@
 package com.srijan.motosports.features.cookyourcar;
-
+import android.graphics.Typeface;
 import android.view.View;
 import android.widget.Checkable;
 import android.widget.CheckedTextView;
@@ -27,6 +27,7 @@ public class CookYourCarChildViewHolder extends CheckableChildViewHolder {
     public CookYourCarChildViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
+
     }
 
     @Override

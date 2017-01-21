@@ -1,6 +1,7 @@
 package com.srijan.motosports.features.cookyourcar;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,6 +46,14 @@ public class CookYourCarFragment extends Fragment implements ItemCheckChangedLis
         View view = inflater.inflate(R.layout.fragment_cook_your_car, container, false);
         ButterKnife.bind(this, view);
         setUpRecyclerView();
+        TextView t1 = (TextView)view.findViewById(R.id.buy_now_cookYouCar);
+        TextView t2 = (TextView)view.findViewById(R.id.const_Cookyourcaritems);
+        TextView t4 = (TextView)view.findViewById(R.id.constTotalAmount_cookYourCar);
+        Typeface face= Typeface.createFromAsset(getContext().getAssets(), "font/finalFont.ttf");
+        t1.setTypeface(face);
+        t2.setTypeface(face);
+        totalAmount.setTypeface(face);
+        t4.setTypeface(face);
         return view;
     }
 

@@ -1,6 +1,7 @@
 package com.srijan.motosports.features.home.fragment;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,6 +22,7 @@ import com.srijan.motosports.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -91,7 +93,7 @@ public class HomeFragment extends Fragment {
                 };
         ArrayList<String> newsList = new ArrayList<String>();
         newsList.addAll( Arrays.asList(news) );
-        listAdapter = new ArrayAdapter<String>(getContext(), R.layout.listitem_newsfeed, newsList);
+        listAdapter = new ArrayAdapter<String>(getContext(),R.layout.listitem_newsfeed,newsList);
         newsFeed.setAdapter(listAdapter);
     }
 

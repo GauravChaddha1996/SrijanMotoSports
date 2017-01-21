@@ -6,6 +6,9 @@
             android:id="@+id/nav_home"
             android:title="Home" />
         <item
+            android:id="@+id/nav_about"
+            android:title="About us" />
+        <item
             android:id="@+id/nav_models"
             android:title="Models" />
         <item
@@ -21,8 +24,8 @@
             android:id="@+id/nav_subscribe"
             android:title="Subscribe!" />
         <item
-            android:id="@+id/nav_about"
-            android:title="About us" />
+            android:id="@+id/nav_contact_us"
+            android:title="Contact Us" />
     </group>
 
 </menu>

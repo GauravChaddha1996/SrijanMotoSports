@@ -1,6 +1,7 @@
 package com.srijan.motosports.features.models;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -65,7 +67,31 @@ public class TSI117SEFragment extends Fragment implements View.OnClickListener,B
 
         buyNow = (Button) getView().findViewById(R.id.button_buynow_tsise);
         buyNow.setOnClickListener(this);
-
+        TextView t1 = (TextView)getView().findViewById(R.id.text_title_tsi17se);
+        TextView t2 = (TextView)getView().findViewById(R.id.t1);
+    //    TextView t3 = (TextView)getView().findViewById(R.id.t2);
+        TextView t4 = (TextView)getView().findViewById(R.id.t3);
+      //  TextView t5 = (TextView)getView().findViewById(R.id.t4);
+        TextView t7 = (TextView)getView().findViewById(R.id.t5);
+       // TextView t8 = (TextView)getView().findViewById(R.id.t6);
+        TextView t9 = (TextView)getView().findViewById(R.id.t7);
+       // TextView t10 = (TextView)getView().findViewById(R.id.t8);
+        TextView t11 = (TextView)getView().findViewById(R.id.t9);
+       // TextView t12 = (TextView)getView().findViewById(R.id.t10);
+        TextView t13 = (TextView)getView().findViewById(R.id.t11);
+        Typeface face= Typeface.createFromAsset(getContext().getAssets(), "font/finalFont.ttf");
+        t1.setTypeface(face);
+        t2.setTypeface(face);
+      //  t3.setTypeface(face);
+        t4.setTypeface(face);
+      //  t5.setTypeface(face);
+        t7.setTypeface(face);
+      //  t8.setTypeface(face);
+        t9.setTypeface(face);
+       // t10.setTypeface(face);
+        t11.setTypeface(face);
+      //  t12.setTypeface(face);
+        t13.setTypeface(face);
         super.onActivityCreated(savedInstanceState);
     }
     

@@ -1,6 +1,7 @@
 package com.srijan.motosports.features.cookyourcar;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -21,11 +22,13 @@ public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYo
 
     LayoutInflater inflater;
     ItemCheckChangedListener checkChangeListener;
+    Context context;
 
     public CookYourCarAdapter(Context context, List<? extends CheckedExpandableGroup> groups, ItemCheckChangedListener checkChangeListener) {
         super(groups);
         inflater = LayoutInflater.from(context);
         this.checkChangeListener = checkChangeListener;
+        this.context=context;
     }
 
     @Override
@@ -39,6 +42,8 @@ public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYo
         holder.childTitle.setText(itemChild.getTitle());
         holder.childCost.setText("$" + itemChild.getCost());
         holder.childDescription.setText(itemChild.getDescription());
+        Typeface face= Typeface.createFromAsset(context.getAssets(), "font/finalFont.ttf");
+        holder.childTitle.setTypeface(face);
         calculateAmount();
         for(int i=0;i<group.selectedChildren.length;i++) {
             if(group.isChildChecked(i) && childIndex == i) {
@@ -56,6 +61,8 @@ public class CookYourCarAdapter extends CheckableChildRecyclerViewAdapter<CookYo
     public void onBindGroupViewHolder(CookYourCarParentViewHolder holder, int flatPosition, ExpandableGroup group) {
         CookYourCarItem item = (CookYourCarItem) group;
         holder.parentTitle.setText(item.getTitle());
+        Typeface face= Typeface.createFromAsset(context.getAssets(), "font/finalFont.ttf");
+        holder.parentTitle.setTypeface(face);
         calculateAmount();
     }
 

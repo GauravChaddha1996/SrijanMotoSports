@@ -1,6 +1,7 @@
 package com.srijan.motosports.features.models;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -66,7 +67,9 @@ public class TSI117KEFragment extends Fragment implements BaseSliderView.OnSlide
 
         buyNow = (Button) getView().findViewById(R.id.button_buynow_tsike);
         buyNow.setOnClickListener(this);
-
+        TextView t1 = (TextView)getView().findViewById(R.id.text_title_tsi17ke);
+        Typeface face= Typeface.createFromAsset(getContext().getAssets(), "font/finalFont.ttf");
+        t1.setTypeface(face);
         super.onActivityCreated(savedInstanceState);
     }
 

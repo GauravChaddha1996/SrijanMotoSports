@@ -1,5 +1,6 @@
 package com.srijan.motosports.features.races;
 
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -20,6 +21,8 @@ import com.srijan.motosports.R;
             driver = (TextView)v.findViewById(R.id.driver);
             points = (TextView)v.findViewById(R.id.points);
             lapTime = (TextView)v.findViewById(R.id.lapTime);
+
+
         }
     }
 
