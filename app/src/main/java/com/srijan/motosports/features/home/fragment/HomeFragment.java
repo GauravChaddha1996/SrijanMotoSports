@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment {
                 };
         ArrayList<String> newsList = new ArrayList<String>();
         newsList.addAll( Arrays.asList(news) );
-        listAdapter = new ArrayAdapter<String>(getContext(),R.layout.listitem_newsfeed,newsList);
+        listAdapter = new ArrayAdapter<String>(getContext(),R.layout.listitem_newsfeed,R.id.textView15,newsList);
         newsFeed.setAdapter(listAdapter);
     }
 
@@ -101,7 +101,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this
-        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("Srijan Motosports");
+        ((HomeActivity)getActivity()).getSupportActionBar().setTitle("Srijan Motosports");                              
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
         setImageSlider();
