@@ -1,6 +1,8 @@
 # SrijanMotoSports
 Srijan Motosports Business Plan Android Application
+
 The app was developed as a Business plan android application for the Srijan Team representing BIT MESRA at Formula Student India event.
+
 The app was ranked was ranked 4th at the Formula Student India event.  
 
 ## Features
